@@ -1,1 +1,0 @@
-[{"tag":"#P9YJ2QQ89","discordName":"krilp","townHallLevel":0,"townHallWeaponLevel":0,"expLevel":0,"trophies":0,"bestTrophies":0,"warStars":0,"donations":0,"donationsRecieved":0,"clanCapitalContributions":0}]
