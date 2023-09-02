@@ -31,6 +31,9 @@ public class Player {
 		this.tag = tag;
 	}
 	
+	public void setDiscordName(String discordName) {
+		this.discordName = discordName;
+	} //setDiscordName
 	
 	public League getLeague() {
 		return league;
@@ -77,87 +80,7 @@ public class Player {
 		return toReturn;
 	} //getPrettyHeroes
 	
-	public String getTownHallImageLink() {
-		switch (townHallLevel) {
-		
-		case 1:
-			return "https://static.wikia.nocookie.net/clashofclans/images/f/fd/Town_Hall1.png/revision/latest/scale-to-width-down/100?cb=20170827034930";
-		case 2:
-			return "https://static.wikia.nocookie.net/clashofclans/images/7/7d/Town_Hall2.png/revision/latest/scale-to-width-down/100?cb=20170827050036";
-		case 3:
-			return "https://static.wikia.nocookie.net/clashofclans/images/d/dd/Town_Hall3.png/revision/latest/scale-to-width-down/100?cb=20170827050050";
-		case 4:
-			return "https://static.wikia.nocookie.net/clashofclans/images/e/e7/Town_Hall4.png/revision/latest/scale-to-width-down/100?cb=20170827050104";
-		case 5:
-			return "https://static.wikia.nocookie.net/clashofclans/images/a/a3/Town_Hall5.png/revision/latest/scale-to-width-down/100?cb=20170827050118";
-		case 6:
-			return "https://static.wikia.nocookie.net/clashofclans/images/5/52/Town_Hall6.png/revision/latest/scale-to-width-down/100?cb=20170827050220";
-		case 7:
-			return "https://static.wikia.nocookie.net/clashofclans/images/7/75/Town_Hall7.png/revision/latest/scale-to-width-down/100?cb=20170827051024";
-		case 8:
-			return "https://static.wikia.nocookie.net/clashofclans/images/f/fa/Town_Hall8.png/revision/latest/scale-to-width-down/100?cb=20170827051039";
-		case 9:
-			return "https://static.wikia.nocookie.net/clashofclans/images/e/e0/Town_Hall9.png/revision/latest/scale-to-width-down/100?cb=20170827045259";
-		case 10:
-			return "https://static.wikia.nocookie.net/clashofclans/images/5/5c/Town_Hall10.png/revision/latest/scale-to-width-down/110?cb=20170827040043";
-		case 11:
-			return "https://static.wikia.nocookie.net/clashofclans/images/9/96/Town_Hall11.png/revision/latest/scale-to-width-down/105?cb=20210410001514";
-		case 12:
-			switch (townHallWeaponLevel) {
-			case 1:
-				return "https://static.wikia.nocookie.net/clashofclans/images/c/c7/Town_Hall12-1.png/revision/latest/scale-to-width-down/110?cb=20180603203226";
-			case 2:
-				return "https://static.wikia.nocookie.net/clashofclans/images/2/28/Town_Hall12-2.png/revision/latest/scale-to-width-down/110?cb=20180603203239";
-			case 3:
-				return "https://static.wikia.nocookie.net/clashofclans/images/2/28/Town_Hall12-3.png/revision/latest/scale-to-width-down/110?cb=20180603203254";
-			case 4:
-				return "https://static.wikia.nocookie.net/clashofclans/images/2/28/Town_Hall12-4.png/revision/latest/scale-to-width-down/110?cb=20180603203306";
-			case 5:
-				return "https://static.wikia.nocookie.net/clashofclans/images/7/7c/Town_Hall12-5.png/revision/latest/scale-to-width-down/110?cb=20180603203336";
-			} //switch
-		case 13:
-			switch (townHallWeaponLevel) {
-			case 1:
-				return "https://static.wikia.nocookie.net/clashofclans/images/9/98/Town_Hall13-1.png/revision/latest/scale-to-width-down/120?cb=20200831024426";
-			case 2:
-				return "https://static.wikia.nocookie.net/clashofclans/images/a/a0/Town_Hall13-2.png/revision/latest/scale-to-width-down/120?cb=20200831024426";
-			case 3:
-				return "https://static.wikia.nocookie.net/clashofclans/images/1/17/Town_Hall13-3.png/revision/latest/scale-to-width-down/120?cb=20200831024427";
-			case 4:
-				return "https://static.wikia.nocookie.net/clashofclans/images/7/78/Town_Hall13-4.png/revision/latest/scale-to-width-down/120?cb=20200831024427";
-			case 5:
-				return "https://static.wikia.nocookie.net/clashofclans/images/1/10/Town_Hall13-5.png/revision/latest/scale-to-width-down/120?cb=20200831024428";
-			} //switch
-		case 14:
-			switch (townHallWeaponLevel) {
-			case 1:
-				return "https://static.wikia.nocookie.net/clashofclans/images/e/e0/Town_Hall14-1.png/revision/latest/scale-to-width-down/110?cb=20210413000722";
-			case 2:
-				return "https://static.wikia.nocookie.net/clashofclans/images/c/c4/Town_Hall14-2.png/revision/latest/scale-to-width-down/110?cb=20210413000738";
-			case 3:
-				return "https://static.wikia.nocookie.net/clashofclans/images/d/d7/Town_Hall14-3.png/revision/latest/scale-to-width-down/110?cb=20210413000808";
-			case 4:
-				return "https://static.wikia.nocookie.net/clashofclans/images/5/5d/Town_Hall14-4.png/revision/latest/scale-to-width-down/110?cb=20210413000837";
-			case 5:
-				return "https://static.wikia.nocookie.net/clashofclans/images/1/1c/Town_Hall14-5.png/revision/latest/scale-to-width-down/110?cb=20210413000854";
-			} //switch
-		case 15:
-			switch (townHallWeaponLevel) {
-			case 1:
-				return "https://static.wikia.nocookie.net/clashofclans/images/5/5b/Town_Hall15-1.png/revision/latest/scale-to-width-down/115?cb=20221120065403";
-			case 2:
-				return "https://static.wikia.nocookie.net/clashofclans/images/e/ec/Town_Hall15-2.png/revision/latest/scale-to-width-down/115?cb=20221120065412";
-			case 3:
-				return "https://static.wikia.nocookie.net/clashofclans/images/3/3d/Town_Hall15-3.png/revision/latest/scale-to-width-down/115?cb=20221120065433";
-			case 4:
-				return "https://static.wikia.nocookie.net/clashofclans/images/3/38/Town_Hall15-4.png/revision/latest/scale-to-width-down/115?cb=20221120070058";
-			case 5:
-				return "https://static.wikia.nocookie.net/clashofclans/images/e/e6/Town_Hall15-5.png/revision/latest/scale-to-width-down/115?cb=20221120065456";
-			} //switch
-		default:
-			return "";
-		} //switch
-	} //getTownHallImageLink
+	
 	
 	/**
 	 * @return the tag
@@ -266,6 +189,8 @@ public class Player {
 		return discordName;
 	}
 	
+
+
 	public double getHeroCompletePercent() {
 		double heroCompletePercent = 
 				(((double)(searchHero("Barbarian King").getLevel() + 
@@ -300,10 +225,91 @@ public class Player {
 	
 	//can change the toString later to allow for playertag discrimination
 	@Override
-		public String toString() {
-			return discordName;
-			//return "(" + discordName + ":" + playerTag + ")";
-		}
+	public String toString() {
+		return discordName;
+		//return "(" + discordName + ":" + playerTag + ")";
+	}
 	
+	public String getTownHallImageLink() {
+		switch (townHallLevel) {
+		
+		case 1:
+			return "https://static.wikia.nocookie.net/clashofclans/images/f/fd/Town_Hall1.png/revision/latest/scale-to-width-down/100?cb=20170827034930";
+		case 2:
+			return "https://static.wikia.nocookie.net/clashofclans/images/7/7d/Town_Hall2.png/revision/latest/scale-to-width-down/100?cb=20170827050036";
+		case 3:
+			return "https://static.wikia.nocookie.net/clashofclans/images/d/dd/Town_Hall3.png/revision/latest/scale-to-width-down/100?cb=20170827050050";
+		case 4:
+			return "https://static.wikia.nocookie.net/clashofclans/images/e/e7/Town_Hall4.png/revision/latest/scale-to-width-down/100?cb=20170827050104";
+		case 5:
+			return "https://static.wikia.nocookie.net/clashofclans/images/a/a3/Town_Hall5.png/revision/latest/scale-to-width-down/100?cb=20170827050118";
+		case 6:
+			return "https://static.wikia.nocookie.net/clashofclans/images/5/52/Town_Hall6.png/revision/latest/scale-to-width-down/100?cb=20170827050220";
+		case 7:
+			return "https://static.wikia.nocookie.net/clashofclans/images/7/75/Town_Hall7.png/revision/latest/scale-to-width-down/100?cb=20170827051024";
+		case 8:
+			return "https://static.wikia.nocookie.net/clashofclans/images/f/fa/Town_Hall8.png/revision/latest/scale-to-width-down/100?cb=20170827051039";
+		case 9:
+			return "https://static.wikia.nocookie.net/clashofclans/images/e/e0/Town_Hall9.png/revision/latest/scale-to-width-down/100?cb=20170827045259";
+		case 10:
+			return "https://static.wikia.nocookie.net/clashofclans/images/5/5c/Town_Hall10.png/revision/latest/scale-to-width-down/110?cb=20170827040043";
+		case 11:
+			return "https://static.wikia.nocookie.net/clashofclans/images/9/96/Town_Hall11.png/revision/latest/scale-to-width-down/105?cb=20210410001514";
+		case 12:
+			switch (townHallWeaponLevel) {
+			case 1:
+				return "https://static.wikia.nocookie.net/clashofclans/images/c/c7/Town_Hall12-1.png/revision/latest/scale-to-width-down/110?cb=20180603203226";
+			case 2:
+				return "https://static.wikia.nocookie.net/clashofclans/images/2/28/Town_Hall12-2.png/revision/latest/scale-to-width-down/110?cb=20180603203239";
+			case 3:
+				return "https://static.wikia.nocookie.net/clashofclans/images/2/28/Town_Hall12-3.png/revision/latest/scale-to-width-down/110?cb=20180603203254";
+			case 4:
+				return "https://static.wikia.nocookie.net/clashofclans/images/2/28/Town_Hall12-4.png/revision/latest/scale-to-width-down/110?cb=20180603203306";
+			case 5:
+				return "https://static.wikia.nocookie.net/clashofclans/images/7/7c/Town_Hall12-5.png/revision/latest/scale-to-width-down/110?cb=20180603203336";
+			} //switch
+		case 13:
+			switch (townHallWeaponLevel) {
+			case 1:
+				return "https://static.wikia.nocookie.net/clashofclans/images/9/98/Town_Hall13-1.png/revision/latest/scale-to-width-down/120?cb=20200831024426";
+			case 2:
+				return "https://static.wikia.nocookie.net/clashofclans/images/a/a0/Town_Hall13-2.png/revision/latest/scale-to-width-down/120?cb=20200831024426";
+			case 3:
+				return "https://static.wikia.nocookie.net/clashofclans/images/1/17/Town_Hall13-3.png/revision/latest/scale-to-width-down/120?cb=20200831024427";
+			case 4:
+				return "https://static.wikia.nocookie.net/clashofclans/images/7/78/Town_Hall13-4.png/revision/latest/scale-to-width-down/120?cb=20200831024427";
+			case 5:
+				return "https://static.wikia.nocookie.net/clashofclans/images/1/10/Town_Hall13-5.png/revision/latest/scale-to-width-down/120?cb=20200831024428";
+			} //switch
+		case 14:
+			switch (townHallWeaponLevel) {
+			case 1:
+				return "https://static.wikia.nocookie.net/clashofclans/images/e/e0/Town_Hall14-1.png/revision/latest/scale-to-width-down/110?cb=20210413000722";
+			case 2:
+				return "https://static.wikia.nocookie.net/clashofclans/images/c/c4/Town_Hall14-2.png/revision/latest/scale-to-width-down/110?cb=20210413000738";
+			case 3:
+				return "https://static.wikia.nocookie.net/clashofclans/images/d/d7/Town_Hall14-3.png/revision/latest/scale-to-width-down/110?cb=20210413000808";
+			case 4:
+				return "https://static.wikia.nocookie.net/clashofclans/images/5/5d/Town_Hall14-4.png/revision/latest/scale-to-width-down/110?cb=20210413000837";
+			case 5:
+				return "https://static.wikia.nocookie.net/clashofclans/images/1/1c/Town_Hall14-5.png/revision/latest/scale-to-width-down/110?cb=20210413000854";
+			} //switch
+		case 15:
+			switch (townHallWeaponLevel) {
+			case 1:
+				return "https://static.wikia.nocookie.net/clashofclans/images/5/5b/Town_Hall15-1.png/revision/latest/scale-to-width-down/115?cb=20221120065403";
+			case 2:
+				return "https://static.wikia.nocookie.net/clashofclans/images/e/ec/Town_Hall15-2.png/revision/latest/scale-to-width-down/115?cb=20221120065412";
+			case 3:
+				return "https://static.wikia.nocookie.net/clashofclans/images/3/3d/Town_Hall15-3.png/revision/latest/scale-to-width-down/115?cb=20221120065433";
+			case 4:
+				return "https://static.wikia.nocookie.net/clashofclans/images/3/38/Town_Hall15-4.png/revision/latest/scale-to-width-down/115?cb=20221120070058";
+			case 5:
+				return "https://static.wikia.nocookie.net/clashofclans/images/e/e6/Town_Hall15-5.png/revision/latest/scale-to-width-down/115?cb=20221120065456";
+			} //switch
+		default:
+			return "";
+		} //switch
+	} //getTownHallImageLink
 	
 } //Player

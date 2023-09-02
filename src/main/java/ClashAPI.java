@@ -44,7 +44,7 @@ public class ClashAPI {
             	    response.append(responseLine.trim());
             	} //while
             	System.out.println("response:" + response.toString());
-            	JsonObject jsonObject = new JsonParser().parse(response.toString()).getAsJsonObject();
+            	JsonObject jsonObject = JsonParser.parseString(response.toString()).getAsJsonObject();
             	return jsonObject.get("townHallLevel").getAsString();
             } //try
             
@@ -77,9 +77,19 @@ public class ClashAPI {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} //try
-		
 		return null;
 	} //getClanData
+
+	public static JsonObject getClanWarsData(String clanTag) throws FileNotFoundException {
+		try {
+			clanTag = URLEncoder.encode(clanTag, "UTF-8");
+			return getData(clanTag + "/warlog?limit=5", "clans"); //limits to 5 responses
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} //try
+		return null;
+	} //getClanWarsData
 	
 	public static JsonObject getData(String tag, String type) throws FileNotFoundException {
 		setClashAPIKey();
@@ -107,7 +117,7 @@ public class ClashAPI {
 	        	    response.append(responseLine.trim());
 	        	} //while
 	        	//System.out.println(response.toString());
-	        	JsonObject jsonObject = new JsonParser().parse(response.toString()).getAsJsonObject();
+	        	JsonObject jsonObject = JsonParser.parseString(response.toString()).getAsJsonObject();
 	        	return jsonObject;
 	        } //try
 		} catch (Exception e) {

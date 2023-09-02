@@ -3,6 +3,7 @@ package clan;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import clan.war.War;
 import player.League;
 import player.Player;
 
@@ -19,6 +20,14 @@ public class Clan {
 	int warWins;
 	int warLosses;
 	int warTies;
+	ArrayList<War> clanWarLog;
+
+	/**
+	 * @return the memberList
+	 */
+	public ArrayList<War> getClanWars() {
+		return clanWarLog;
+	}
 
 	/**
 	 * @return the memberList
