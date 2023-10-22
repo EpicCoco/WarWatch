@@ -227,13 +227,16 @@ public class Command {
 		numberFormat.setMinimumFractionDigits(1);
 		
 		try {
-			
+			//get player data
 			String playerData = ClashAPI.getPlayerData(playerTag).toString();
 			Player player = new Gson().fromJson(playerData, Player.class);
+			//get player's clan data (for war log)
+			String playerClanData = ClashAPI.getClanWarsData(player.getClan().getTag()).toString();
+			Clan playerClan = new Gson().fromJson(playerClanData, Clan.class);
 			
 			int donations = player.searchAchievement("Friend in Need").getValue();
 			
-            /*
+            /* player donation/recieved ratio
             int donoRatio;
 			if (player.getDonationsRecieved() != 0) {
 				donoRatio = player.getDonations()/player.getDonationsRecieved();
@@ -253,7 +256,8 @@ public class Command {
 					"> **Usefulness Score: " + player.getUsefulness() + "**"
 					, true);
 			eb.addField("Heroes", player.getPrettyHeroes() + "> **Heroes Complete: " + player.getHeroCompletePercent() + "%**", true);
-			eb.addField("War History", "text3", false);
+			//playerClan.getClanWars().get(0).getResult()
+			eb.addField("War History", "Coming soon!", false);
 			eb.setAuthor(player.getTag());
 			eb.setThumbnail(player.getTownHallImageLink());
 			eb.setColor(Color.CYAN);

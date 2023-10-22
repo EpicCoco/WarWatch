@@ -27,14 +27,14 @@ public class Clan {
 	 */
 	public ArrayList<War> getClanWars() {
 		return clanWarLog;
-	}
+	} //getClanWars
 
 	/**
 	 * @return the memberList
 	 */
 	public ArrayList<Player> getMemberList() {
 		return memberList;
-	}
+	} //getMemberList
 	
 	public Player getLeader() {
 		Collections.sort(memberList, (o1, o2) -> o1.getRoleNumber() - o2.getRoleNumber());

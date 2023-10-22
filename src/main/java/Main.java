@@ -68,6 +68,7 @@ public class Main extends ListenerAdapter {
 	        					new SubcommandData("tag", "Look up clan based on clan tag")
 	        						.addOption(OptionType.STRING, "tag", "Clan Tag (#2Q9G8QJ2P for example)", true),
 	        					new SubcommandData("list", "Display a list of all clan members")
+									.addOption(OptionType.STRING, "tag", "Clan Tag (#2Q9G8QJ2P for example)", true)
 	        			),
 	        		    
 	        		    
