@@ -89,7 +89,7 @@ public class Main extends ListenerAdapter {
 	        			
 	        		//commands done
 	        		).queue();
-	        
+				sc.close();
 	     
 		} catch(Exception e) {
 			e.printStackTrace();

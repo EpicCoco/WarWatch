@@ -231,8 +231,8 @@ public class Command {
 			String playerData = ClashAPI.getPlayerData(playerTag).toString();
 			Player player = new Gson().fromJson(playerData, Player.class);
 			//get player's clan data (for war log)
-			String playerClanData = ClashAPI.getClanWarsData(player.getClan().getTag()).toString();
-			Clan playerClan = new Gson().fromJson(playerClanData, Clan.class);
+			//String playerClanData = ClashAPI.getClanWarsData(player.getClan().getTag()).toString();
+			//Clan playerClan = new Gson().fromJson(playerClanData, Clan.class);
 			
 			int donations = player.searchAchievement("Friend in Need").getValue();
 			
